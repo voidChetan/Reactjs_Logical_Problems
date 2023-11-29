@@ -1,4 +1,4 @@
- 
+
 import './App.css';
 import Header from './layout/Header';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
@@ -9,16 +9,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path='/' element={<AboutMe></AboutMe>} ></Route>
-          <Route path='/GroceryApp' element={<GroceryApp></GroceryApp>} ></Route>
-          <Route path='/AboutMe' element={<AboutMe></AboutMe>} ></Route>
-
-          <Route path='*' element={<AboutMe></AboutMe>}>  </Route>
-        </Routes>
-      </BrowserRouter>
-
-
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<AboutMe></AboutMe>} ></Route>
+            <Route path='/GroceryApp' element={<GroceryApp></GroceryApp>} ></Route>
+            <Route path='/AboutMe' element={<AboutMe></AboutMe>} ></Route> 
+            <Route path='*' element={<AboutMe></AboutMe>}>  </Route>
+          </Routes>
+        </div>
+      </BrowserRouter> 
     </div>
   );
 }
