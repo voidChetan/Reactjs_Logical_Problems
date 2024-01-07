@@ -19,3 +19,9 @@ code {
   background-color: #f4f4f4;
   border-radius: 10px;
 }
+.form-control {
+  border: 1px solid black !important;
+}
+.form-select {
+  border: 1px solid black !important;
+}

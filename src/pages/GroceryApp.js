@@ -45,7 +45,7 @@ const GroceryApp = () => {
                                 <div className="row">
                                     <div className="col-5 col-md-5 col-sm-5 col-lg-5">
                                         <label>Select Item</label>
-                                        <select value={selectedItem.itemName} className="form-control" onChange={(event)=>{changeSelectedItem(event,'itemName')}}>
+                                        <select value={selectedItem.itemName} className="form-select" onChange={(event)=>{changeSelectedItem(event,'itemName')}}>
                                             <option value="">Select Item</option>
                                             {
                                                 itemList.map((item)=> {
@@ -95,15 +95,10 @@ const GroceryApp = () => {
                                     </tfoot>
                                 </table>
                             </div>
-                        </div>
-
-                    </div>
-
-
+                        </div> 
+                    </div> 
                 </div>
-                <div className='col-6'>
-                    {selectedItem.itemName}- {selectedItem.quantity} <br/>
-                    {cartItems.length}
+                <div className='col-6'> 
                     <ul class="mt-5">
                         <li>Create Array of Grocery Items with their Prices</li>
                         <li>Show grocery item in dropdown and add textbox to Enter Quantity &amp; button to Add Them </li>

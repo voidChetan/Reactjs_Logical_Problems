@@ -22,6 +22,9 @@ const Header = () => {
                                     <li>
                                         <Link class="dropdown-item" to="/GroceryApp">GroceryApp</Link>
                                         </li>
+                                        <li>
+                                        <Link class="dropdown-item" to="/Dependent-Dropdown">Dependent-Dropdown</Link>
+                                        </li>
                                     {/* <li><a className='dropdown-item' href='#'>Another action</a></li>
                                     <li><hr className='dropdown-divider' /></li>
                                     <li><a className='dropdown-item' href='#'>Something else here</a></li> */}
