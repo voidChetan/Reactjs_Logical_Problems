@@ -34,7 +34,7 @@ const DependentDropdown = () => {
                 <p>Logic Building & Problem Solving </p>
             </div>
             <div className='row pt-1'>
-                <div className="col-12">
+                <div className="col-12 p-6">
                     <div className="myBox">
                         <div className='row'>
                             <div className='col-4 p-4'>
