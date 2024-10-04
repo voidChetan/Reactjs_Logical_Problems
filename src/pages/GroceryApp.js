@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import useParams from 'react-router-dom';
 
 const GroceryApp = () => {
+    let id = useParams();
     const itemList = [
+        {itemName: 'Milk', price: '52'},
         {itemName: 'Sunflower Oil', price: '250'},
         {itemName: 'Iodised Salt', price: '120'},
         {itemName: 'White Label Sugar', price: '300'},
@@ -16,6 +19,10 @@ const GroceryApp = () => {
 
     const changeSelectedItem = (event, key) => {
         setSelectedItem(prevObj=> ({...prevObj, [key]:  event.target.value }))
+    }
+
+    const changeValue =(event,key) => {
+        setSelectedItem(prev => ({...prev, [key]:event.target.value}))
     }
 
     const addItem = () => {
@@ -45,6 +52,14 @@ const GroceryApp = () => {
                                 <div className="row">
                                     <div className="col-5 col-md-5 col-sm-5 col-lg-5">
                                         <label>Select Item</label>
+                                        <select className='form-control' onChange={(event)=>{changeValue(event,'itemName')}}>
+                                                {
+                                                    itemList.map((data,index)=> {
+                                                        return <option value={data.itemName}>{data.itemName}--{data.price}₹</option>
+                                                    })
+                                                }
+                                          
+                                        </select>
                                         <select value={selectedItem.itemName} className="form-select" onChange={(event)=>{changeSelectedItem(event,'itemName')}}>
                                             <option value="">Select Item</option>
                                             {

@@ -28,6 +28,9 @@ const Header = () => {
                                         <li>
                                         <Link class="dropdown-item" to="/Single-Multple">Single With Multple</Link>
                                         </li>
+                                        <li>
+                                        <Link class="dropdown-item" to="/User">User</Link>
+                                        </li>
                                     {/* <li><a className='dropdown-item' href='#'>Another action</a></li>
                                     <li><hr className='dropdown-divider' /></li>
                                     <li><a className='dropdown-item' href='#'>Something else here</a></li> */}
